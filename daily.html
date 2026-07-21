@@ -37,14 +37,18 @@
   var d = /[?&]d=(\d{4}-\d{2}-\d{2})/.exec(location.search);
   var t = /[?&]t=(\d+)/.exec(location.search);
   var v = /[?&]v=([a-z0-9]+)/.exec(location.search);
-  var href = 'clovercase://daily';
+  var qs = '';
   if (d) {
     document.getElementById('date').textContent = d[1];
-    href += '?d=' + d[1];
-    if (t && v) href += '&t=' + t[1] + '&v=' + v[1];
+    qs = '?d=' + d[1];
+    if (t && v) qs += '&t=' + t[1] + '&v=' + v[1];
   } else {
     document.getElementById('date').textContent = "today's board";
   }
+  // Android Chrome blocks bare custom-scheme hrefs — intent:// syntax opens the app
+  var href = /android/i.test(navigator.userAgent)
+    ? 'intent://daily' + qs + '#Intent;scheme=clovercase;package=com.atakankartli.clovercase;end'
+    : 'clovercase://daily' + qs;
   if (t) {
     var s = parseInt(t[1], 10);
     var mm = String(Math.floor(s / 60)).padStart(2, '0'), ss = String(s % 60).padStart(2, '0');
