@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clover Case — Daily Challenge</title>
+<style>
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: #14100C; color: #F7EFDA; text-align: center;
+    font-family: "Courier New", monospace; padding: 48px 20px;
+  }
+  .clv { font-size: 64px; }
+  h1 { font-size: 26px; letter-spacing: 3px; margin: 18px 0 6px; }
+  #date { color: #FFD65A; font-size: 20px; letter-spacing: 2px; margin: 0 0 10px; }
+  p { color: #C9B48A; max-width: 30em; margin: 14px auto; line-height: 1.6; }
+  a.play {
+    display: inline-block; margin-top: 22px; padding: 18px 34px;
+    background: linear-gradient(#67BE64, #3B9448); color: #F7EFDA; text-decoration: none;
+    font-size: 20px; letter-spacing: 3px; border: 4px solid #23180F; border-radius: 12px;
+    box-shadow: 0 8px 0 #1B4A28;
+  }
+  a.play:active { transform: translateY(6px); box-shadow: 0 2px 0 #1B4A28; }
+  .small { font-size: 14px; margin-top: 34px; }
+  a { color: #7CC96F; }
+</style>
+</head>
+<body>
+  <div class="clv">🍀</div>
+  <h1>CLOVER CASE — DAILY CHALLENGE</h1>
+  <p id="date"></p>
+  <p>A friend challenged you: same board, same pieces — beat their time.</p>
+  <a class="play" id="play" href="clovercase://daily">PLAY THIS DAILY</a>
+  <p class="small">Nothing happens? You need the game first — Clover Case is coming to the
+    App Store. <a href="index.html">About the game</a></p>
+<script>
+  var d = /[?&]d=(\d{4}-\d{2}-\d{2})/.exec(location.search);
+  if (d) {
+    document.getElementById('date').textContent = d[1];
+    document.getElementById('play').href = 'clovercase://daily?d=' + d[1];
+  } else {
+    document.getElementById('date').textContent = "today's board";
+  }
+</script>
+</body>
+</html>
