@@ -35,12 +35,23 @@
     App Store. <a href="index.html">About the game</a></p>
 <script>
   var d = /[?&]d=(\d{4}-\d{2}-\d{2})/.exec(location.search);
+  var t = /[?&]t=(\d+)/.exec(location.search);
+  var v = /[?&]v=([a-z0-9]+)/.exec(location.search);
+  var href = 'clovercase://daily';
   if (d) {
     document.getElementById('date').textContent = d[1];
-    document.getElementById('play').href = 'clovercase://daily?d=' + d[1];
+    href += '?d=' + d[1];
+    if (t && v) href += '&t=' + t[1] + '&v=' + v[1];
   } else {
     document.getElementById('date').textContent = "today's board";
   }
+  if (t) {
+    var s = parseInt(t[1], 10);
+    var mm = String(Math.floor(s / 60)).padStart(2, '0'), ss = String(s % 60).padStart(2, '0');
+    document.querySelector('p:not(#date):not(.small)').textContent =
+      'A friend packed this board in ' + mm + ':' + ss + ' — same board, same pieces. Beat it.';
+  }
+  document.getElementById('play').href = href;
 </script>
 </body>
 </html>
