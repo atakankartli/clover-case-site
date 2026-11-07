@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How I built a Kanoodle-style ball puzzle game for iPhone – Clover Case devlog</title>
+<meta name="description" content="A solo developer's notes on turning the classic ball-piece packing puzzle (like Kanoodle) into Clover Case, a free iPhone game: 12 pieces, 55 balls, a solver, triangle and hexagon boards, and a daily puzzle.">
+<link rel="canonical" href="https://atakankartli.github.io/clover-case-site/blog/building-a-kanoodle-style-puzzle-game.html">
+<link rel="icon" href="../img/icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I built a Kanoodle-style ball puzzle game for iPhone">
+<meta property="og:image" content="https://atakankartli.github.io/clover-case-site/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How I built a Kanoodle-style ball puzzle game for iPhone",
+  "datePublished": "2026-11-07",
+  "author": { "@type": "Person", "name": "Ali Atakan Kartlı" },
+  "image": "https://atakankartli.github.io/clover-case-site/img/og.jpg",
+  "mainEntityOfPage": "https://atakankartli.github.io/clover-case-site/blog/building-a-kanoodle-style-puzzle-game.html",
+  "about": { "@type": "MobileApplication", "name": "Clover Case", "installUrl": "https://apps.apple.com/app/id6792343237" }
+}
+</script>
+<style>
+  body { margin: 0; background: #14100C; color: #F0E8D6; font: 18px/1.7 Georgia, 'Times New Roman', serif; }
+  main { max-width: 700px; margin: 0 auto; padding: 40px 22px 80px; }
+  h1 { font-size: 34px; line-height: 1.2; color: #8FD98A; }
+  h2 { font-size: 24px; margin-top: 44px; color: #8FD98A; }
+  a { color: #8FD98A; }
+  .meta { color: #BFB49E; font-size: 15px; }
+  img { max-width: 260px; border-radius: 16px; display: block; margin: 24px auto; }
+  footer { margin-top: 56px; font-size: 15px; color: #BFB49E; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="../">← Clover Case</a></p>
+  <h1>How I built a Kanoodle-style ball puzzle game for iPhone</h1>
+  <p class="meta">November 7, 2026 · Atakan, solo developer of Clover Case</p>
+
+  <p>I loved those ball-piece packing puzzles as a kid: a little case, a handful of plastic pieces made
+  of fused balls, and a picture card showing which pieces start on the board. Kanoodle is the one most
+  people know. I wanted that same feeling on my phone, and I couldn't find an app that got it right, so I
+  made one. It's called <strong>Clover Case</strong>, and it's free on the
+  <a href="https://apps.apple.com/app/id6792343237">App Store</a>.</p>
+
+  <img src="../img/02-gameplay.webp" alt="Fitting ball pieces into the Clover Case board" width="540" height="1173">
+
+  <h2>12 pieces, 55 balls</h2>
+  <p>The classic board is 11 by 5 holes. The piece set is twelve shapes: one of 3 balls, three of 4 and
+  eight of 5, which adds up to exactly 55 balls. If every piece goes in, the board is full, and there's no
+  slack anywhere. That's what makes this kind of puzzle so satisfying. The last piece either fits
+  perfectly or it doesn't fit at all.</p>
+
+  <h2>Making levels that are actually solvable</h2>
+  <p>A level is a board with some pieces already locked in place, like the picture cards in the physical
+  game. I wrote a solver that packs the full board, then removes pieces to leave a puzzle with a known
+  answer. The fewer pieces you're given, the harder it gets. That gives four difficulty books, 40 levels
+  each, so 160 in total. Each level is generated from a fixed seed, so "Medium 7" is the same puzzle on
+  every phone. That means you can compare notes with a friend.</p>
+
+  <h2>Beyond the rectangle: triangle and hexagon cases</h2>
+  <p>Once the classic board felt good, I added a triangle case (51 holes) and a hexagon case (53 holes).
+  The hexagon is the nastiest. It has six corners and no straight edge to lean against, which kills the
+  "fill the wall first" habit most players rely on.</p>
+
+  <h2>The daily puzzle</h2>
+  <p>Every day there's one empty-board puzzle that's the same for everyone in the world, with a
+  leaderboard. It rolls over at midnight UTC. It has quickly become the part I play most myself.</p>
+
+  <h2>Rendering and feel</h2>
+  <p>The board and pieces are real 3D (Three.js) inside a small Expo app. Most of the work wasn't the
+  3D, though. It was the feel: how a piece lifts when you grab it, how it rotates and flips with one finger,
+  and how it snaps when it lands. The whole thing sits inside a pixel-art travel case with a clover on
+  the lid, hence the name.</p>
+
+  <h2>Try it</h2>
+  <p>Clover Case is free, plays offline, needs no account and is rated 4+. Ads are optional and a one-time
+  purchase removes them. If you like Kanoodle-style puzzles, I'd love to hear what you think. Email me at
+  <a href="mailto:atakankartli@gmail.com">atakankartli@gmail.com</a>.</p>
+  <p><a href="https://apps.apple.com/app/id6792343237"><strong>Get Clover Case on the App Store →</strong></a></p>
+
+  <footer>
+    <p>Kanoodle is a registered trademark of Educational Insights. Clover Case is an independent game and is
+    not affiliated with, sponsored by or endorsed by Educational Insights.</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -13,4 +13,5 @@
 ## Pages
 
 - [Home and FAQ](https://atakankartli.github.io/clover-case-site/)
+- [Devlog: how Clover Case was built](https://atakankartli.github.io/clover-case-site/blog/building-a-kanoodle-style-puzzle-game.html)
 - [Privacy policy](https://atakankartli.github.io/clover-case-site/privacy.html)
