@@ -3,23 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clover Case — Support</title>
+<title>Clover Case – A Free Kanoodle-Style Ball Puzzle Game for iPhone</title>
+<meta name="description" content="Clover Case is a free packing puzzle game for iPhone in the style of Kanoodle: fit chunky ball pieces into a board. 160 handcrafted levels, triangle and hexagon boards, and a daily challenge.">
+<link rel="canonical" href="https://atakankartli.github.io/clover-case-site/">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<meta name="apple-itunes-app" content="app-id=6792343237">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clover Case – a cozy ball-piece packing puzzle for iPhone">
+<meta property="og:description" content="Fit every bead piece into the case. 160 handcrafted levels, triangle and hexagon boards, and a daily challenge. Free on the App Store.">
+<meta property="og:url" content="https://atakankartli.github.io/clover-case-site/">
+<meta property="og:image" content="https://atakankartli.github.io/clover-case-site/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Clover Case: Noodle Puzzle",
+  "alternateName": "Clover Case",
+  "url": "https://atakankartli.github.io/clover-case-site/",
+  "image": "https://atakankartli.github.io/clover-case-site/img/icon.png",
+  "screenshot": "https://atakankartli.github.io/clover-case-site/img/02-gameplay.webp",
+  "description": "A cozy packing puzzle game in the style of Kanoodle and other ball-piece polyomino puzzles. Pick up bead pieces, rotate and flip them, and fit every one into the board. 160 handcrafted levels across four difficulties, classic, triangle and hexagon boards, and a daily challenge.",
+  "operatingSystem": "iOS 15.1 or later",
+  "applicationCategory": "GameApplication",
+  "applicationSubCategory": "Puzzle",
+  "genre": "Puzzle",
+  "contentRating": "4+",
+  "inLanguage": ["en", "tr", "de", "fr", "es", "pt-BR", "ja"],
+  "installUrl": "https://apps.apple.com/app/id6792343237",
+  "downloadUrl": "https://apps.apple.com/app/id6792343237",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Ali Atakan Kartlı" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is there a Kanoodle app for iPhone?",
+     "acceptedAnswer": {"@type": "Answer", "text": "There is no official Kanoodle app that we know of, but Clover Case is a free iPhone game built around the same idea: chunky ball pieces that you rotate, flip and fit into a board. It has 160 handcrafted levels, triangle and hexagon boards, and a daily challenge."}},
+    {"@type": "Question", "name": "What is a good game like Kanoodle?",
+     "acceptedAnswer": {"@type": "Answer", "text": "If you enjoy Kanoodle, try Clover Case. It is a free packing puzzle for iPhone where you fit bead-style polyomino pieces into a case. Levels go from relaxing to expert, and there is a new daily puzzle every day."}},
+    {"@type": "Question", "name": "Can I play a Kanoodle-style puzzle on my phone for free?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. Clover Case is free on the App Store. It shows optional ads, which you can remove with a one-time purchase. It works offline and needs no account."}},
+    {"@type": "Question", "name": "Is Clover Case the official Kanoodle game?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. Clover Case is an independent game made by a solo developer. It is not affiliated with or endorsed by Educational Insights, which owns the Kanoodle trademark."}},
+    {"@type": "Question", "name": "Is Clover Case good for kids?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is rated 4+, has no chat or account, and the easy levels are a gentle way to build spatial reasoning. The expert levels are hard enough for adults."}},
+    {"@type": "Question", "name": "Does Clover Case work offline?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. All 160 levels play offline. Only the daily leaderboard needs a connection."}}
+  ]
+}
+</script>
 <style>
-  body { margin: 0; background: #14100C; color: #F0E8D6; font: 17px/1.7 Georgia, 'Times New Roman', serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 48px 24px 96px; }
-  h1 { font-size: 28px; color: #8FD98A; }
-  a { color: #8FD98A; }
+  :root { --bg: #14100C; --card: #1F1913; --ink: #F0E8D6; --dim: #BFB49E; --green: #8FD98A; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.65 Georgia, 'Times New Roman', serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 40px 22px 80px; }
+  header { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  header img { width: 112px; height: 112px; border-radius: 24px; }
+  h1 { font-size: 40px; line-height: 1.15; margin: 0; color: var(--green); }
+  .tag { margin: 6px 0 0; color: var(--dim); font-size: 20px; }
+  h2 { font-size: 26px; margin: 56px 0 12px; color: var(--green); }
+  h3 { font-size: 19px; margin: 24px 0 4px; }
+  a { color: var(--green); }
+  .cta { display: inline-block; margin: 28px 0 8px; padding: 14px 26px; background: var(--green); color: #14100C;
+         font-weight: bold; text-decoration: none; border-radius: 12px; font-size: 19px; }
+  .shots { display: flex; gap: 14px; overflow-x: auto; padding: 8px 0 14px; scroll-snap-type: x mandatory; }
+  .shots img { width: 220px; height: auto; border-radius: 16px; flex: none; scroll-snap-align: start; }
+  ul { padding-left: 22px; }
+  .faq { background: var(--card); border-radius: 14px; padding: 4px 22px 18px; }
+  .faq p { margin: 0; color: var(--dim); }
+  footer { margin-top: 64px; font-size: 15px; color: var(--dim); }
 </style>
 </head>
 <body>
 <main>
-  <h1>Clover Case</h1>
-  <p>A cozy packing puzzle. Fit every piece into the case before the clock runs out —
-  80 handcrafted levels across four difficulties, plus a daily challenge that's the
-  same for everyone, everywhere.</p>
-  <p><strong>Support:</strong> for help, feedback, or bug reports, email
+  <header>
+    <img src="img/icon.png" alt="Clover Case app icon" width="112" height="112">
+    <div>
+      <h1>Clover Case</h1>
+      <p class="tag">A cozy ball-piece packing puzzle for iPhone, in the spirit of Kanoodle.</p>
+    </div>
+  </header>
+
+  <a class="cta" href="https://apps.apple.com/app/id6792343237">Download free on the App Store</a>
+
+  <p>Pick up chunky bead pieces, turn and flip them with one finger, and snap every shape into the molded
+  board of a little green travel case. If you grew up with Kanoodle or other ball-and-polyomino puzzles,
+  you'll know what to do right away. Clover Case then takes the idea further with 160 levels, new board
+  shapes and a puzzle that's the same for everyone each day.</p>
+
+  <div class="shots">
+    <img src="img/01-menu.webp" alt="Clover Case main menu with the green puzzle case" width="540" height="1173" loading="lazy">
+    <img src="img/02-gameplay.webp" alt="Fitting colored ball pieces into the board" width="540" height="1173" loading="lazy">
+    <img src="img/03-levels.webp" alt="Level select with four difficulty books" width="540" height="1173" loading="lazy">
+    <img src="img/05-daily-win.webp" alt="Daily challenge completed screen" width="540" height="1173" loading="lazy">
+    <img src="img/04-shop.webp" alt="Optional ball styles" width="540" height="1173" loading="lazy">
+  </div>
+
+  <h2>What's in the case</h2>
+  <ul>
+    <li><strong>160 handcrafted levels</strong> in four difficulty books, from a gentle first fit to expert boards.</li>
+    <li><strong>Three board shapes:</strong> the classic rectangle, plus triangle and hexagon cases.</li>
+    <li><strong>A daily challenge:</strong> every player gets the same puzzle, with a daily leaderboard.</li>
+    <li><strong>Hints when you're stuck,</strong> and a timer for when you want pressure.</li>
+    <li><strong>10 optional ball styles</strong> and case skins.</li>
+    <li><strong>Plays offline,</strong> no account needed. Free, with a one-time purchase to remove ads.</li>
+    <li>Available in English, Turkish, German, French, Spanish, Portuguese and Japanese.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  <div class="faq">
+    <h3>Is there a Kanoodle app for iPhone?</h3>
+    <p>There's no official Kanoodle app that we know of, but Clover Case is built around the same idea:
+    chunky ball pieces that you rotate, flip and fit into a board. It's free, with 160 levels and a daily challenge.</p>
+
+    <h3>What's a good game like Kanoodle?</h3>
+    <p>If you like Kanoodle, try Clover Case. It's a packing puzzle where bead-style polyomino pieces fit
+    into a case. Levels go from relaxing to genuinely hard, and there's a new puzzle every day.</p>
+
+    <h3>Can I play a Kanoodle-style puzzle on my phone for free?</h3>
+    <p>Yes. Clover Case is free on the App Store. It shows optional ads, which a one-time purchase removes.</p>
+
+    <h3>Is Clover Case the official Kanoodle game?</h3>
+    <p>No. It's an independent game by a solo developer and isn't affiliated with Educational Insights,
+    which owns the Kanoodle trademark.</p>
+
+    <h3>Is it good for kids?</h3>
+    <p>Yes. It's rated 4+, has no chat or accounts, and the easy levels are a gentle way to build spatial
+    reasoning. The expert levels are hard enough for adults.</p>
+
+    <h3>Does it work offline?</h3>
+    <p>Yes. All 160 levels play offline. Only the daily leaderboard needs a connection.</p>
+  </div>
+
+  <h2>Support</h2>
+  <p>For help, feedback or bug reports, email
   <a href="mailto:atakankartli@gmail.com">atakankartli@gmail.com</a>.</p>
-  <p><a href="privacy.html">Privacy Policy</a></p>
+
+  <footer>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="https://apps.apple.com/app/id6792343237">App Store</a></p>
+    <p>Kanoodle is a registered trademark of Educational Insights. Clover Case is an independent game and is
+    not affiliated with, sponsored by or endorsed by Educational Insights.</p>
+  </footer>
 </main>
 </body>
 </html>

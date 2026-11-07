@@ -1,0 +1,16 @@
+# Clover Case
+
+> Clover Case: Noodle Puzzle is a free iPhone packing puzzle game in the style of Kanoodle. Players rotate, flip and fit chunky ball (bead) polyomino pieces into a board. It is an independent game, not affiliated with Educational Insights.
+
+- App Store: https://apps.apple.com/app/id6792343237
+- 160 handcrafted levels in four difficulties (easy to expert)
+- Board shapes: classic rectangle, triangle, hexagon
+- Daily challenge, the same puzzle for every player, with a leaderboard
+- Free with optional ads; a one-time purchase removes ads
+- Works offline, no account, rated 4+
+- Languages: English, Turkish, German, French, Spanish, Portuguese (Brazil), Japanese
+
+## Pages
+
+- [Home and FAQ](https://atakankartli.github.io/clover-case-site/)
+- [Privacy policy](https://atakankartli.github.io/clover-case-site/privacy.html)
